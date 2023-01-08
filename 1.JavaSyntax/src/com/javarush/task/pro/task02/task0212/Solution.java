@@ -13,6 +13,6 @@ public class Solution {
         //напишите тут ваш код
         System.out.println(usa.toUpperCase());
         System.out.println("Винни Пух".toUpperCase());
-        System.out.println(caps.toUpperCase() + "they know I mean business".toUpperCase());
+        System.out.println((caps + "they know I mean business").toUpperCase());
     }
 }
