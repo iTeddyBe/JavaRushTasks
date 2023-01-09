@@ -1,2 +1,2 @@
 @echo off
-rem example 1
+rem example 2
