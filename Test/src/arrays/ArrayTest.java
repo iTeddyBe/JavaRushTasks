@@ -1,4 +1,4 @@
-package array;
+package arrays;
 
 public class ArrayTest {
 
