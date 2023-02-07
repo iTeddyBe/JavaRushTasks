@@ -2,4 +2,4 @@
 JavaRushTasks: 
 My tasks and solutions.
 
-https://goo-gl.me/GkHAP
+Java String colors: https://goo-gl.me/GkHAP
