@@ -9,6 +9,9 @@ public class ArraysTask0607 {
 
         System.out.println(Arrays.toString(array1));
 
+        System.out.println(-4 % 2);
+
+
         int[] array2 = {};
 
         System.out.println(Arrays.toString(array2));

@@ -1,4 +1,4 @@
-taskKey="com.javarush.task.pro.task10.task1002"\n\nПостроим новый жилой комплекс JavaRush Towers
+taskKey="com.javarush.task.pro.task10.task1002equals"\n\nПостроим новый жилой комплекс JavaRush Towers
 
 Давай построим жилой комплекс из трех высоток. Для этого мы будем использовать три разных способа вывода информации:
 1. Объявляет о результате постройки.
