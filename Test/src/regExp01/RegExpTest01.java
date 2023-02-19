@@ -1,6 +1,7 @@
-package denTest03;
+package regExp01;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,6 +13,10 @@ public class RegExpTest01 {
     private static String checkString;
 
     private static final ArrayList<String>[] levelArrayList = new ArrayList[4];
+    private static final ArrayList<String> saveTag = new ArrayList();
+    private static int indexTag = 0;
+
+    private static final HashMap<Integer, String> hashmapArraySave = new HashMap<>();
 
     private static final ArrayList<String> resultArrayList = new ArrayList<>();
 
@@ -22,13 +27,15 @@ public class RegExpTest01 {
 
     public static void main(String[] args) {
 
+        System.out.println("===============================\nRegExp using Array of ArrayList\n===============================");
+
         for (int i = 0; i < levelArrayList.length; i++) {
             levelArrayList[i] = new ArrayList<>();
         }
 
         checkString = enterString1;
 
-        System.out.println("\n" + checkString.replace("<", "\u001B[94m<").replace(">", ">\u001B[00m") + "\n");
+        System.out.println(checkString.replace("<", "\u001B[94m<").replace(">", ">\u001B[00m") + "\n");
 
         unDress(0);
         unDress(1);
@@ -41,7 +48,7 @@ public class RegExpTest01 {
         resultArrayList.forEach(RegExpTest01::printMy);
     }
 
-    public static void printMy(String str){
+    public static void printMy(String str) {
         System.out.println(str);
     }
 
@@ -49,8 +56,13 @@ public class RegExpTest01 {
         Pattern pattern = Pattern.compile(regExp);
         Matcher matcher = pattern.matcher(checkString);
 
+        String checkStringTmp = checkString;
         while (matcher.find()) {
             levelArrayList[levelTag].add(checkString.substring(matcher.start(), matcher.end()));
+            String indexTagStr = myTagName + String.format("%02d", indexTag) + ":";
+            String stringTag = checkString.substring(matcher.start(), matcher.end());
+            saveTag.add(indexTagStr + stringTag);
+            checkStringTmp = checkStringTmp.replace(stringTag, indexTagStr);
         }
 
         int index = 0;
@@ -91,4 +103,7 @@ public class RegExpTest01 {
 
         resultArrayList.replaceAll(s -> s.replace("<", "\u001B[92m<").replace(">", ">\u001B[00m"));
     }
+
+    //private static String format
+
 }
