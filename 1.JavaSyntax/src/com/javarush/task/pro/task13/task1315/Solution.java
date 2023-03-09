@@ -11,5 +11,10 @@ public class Solution {
         System.out.println(Season.SPRING);
         System.out.println(Season.SUMMER);
         System.out.println(Season.AUTUMN);
+
+        System.out.println("variant 2: ");
+        for (Enum item : Season.values()) {
+            System.out.println(item);
+        }
     }
 }

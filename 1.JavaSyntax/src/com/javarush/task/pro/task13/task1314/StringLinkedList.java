@@ -24,7 +24,7 @@ public class StringLinkedList {
         last.prev = node;
     }
 
-    public String get(int index) {
+    public String get3(int index) {
         int currentIndex = 0;
         Node currentNode = first.next;
         while (currentNode != null) {
@@ -48,6 +48,18 @@ public class StringLinkedList {
             size++;
         }
         return current.value;
+    }
+
+    // === Variant get2 -> get3 - Review Code
+    public String get(int index) {
+        Node current = first.next;
+        int counter = 0;
+        while ((current != null) && (index >= 0)) {
+            if (counter == index) { return current.value; }
+            current = current.next;
+            counter++;
+        }
+        return null;
     }
 
     public static class Node {

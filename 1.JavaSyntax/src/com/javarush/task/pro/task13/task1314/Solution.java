@@ -17,6 +17,6 @@ public class Solution {
         stringLinkedList.add("7");
         stringLinkedList.add("8");
         stringLinkedList.add("9");
-        System.out.println(stringLinkedList.get(4)); // 5
+        System.out.println(stringLinkedList.get3(9)); // 5
     }
 }

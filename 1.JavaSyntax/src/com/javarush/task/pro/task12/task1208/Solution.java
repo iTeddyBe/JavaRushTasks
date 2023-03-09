@@ -7,9 +7,9 @@ package com.javarush.task.pro.task12.task1208;
 public class Solution {
     public static void main(String[] args) {
         compare('a', 'a');
-        compare('a', 'б');
-        compare('р', 'в');
-        compare('ы', 'ы');
+        //compare('a', 'б');
+        //compare('р', 'в');
+        //compare('ы', 'ы');
     }
 
     public static void compare(Character first, Character second) {

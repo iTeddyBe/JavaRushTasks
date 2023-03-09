@@ -1,4 +1,4 @@
-package task12xxtests;
+package task12xx;
 
 public class CheckInteger {
 

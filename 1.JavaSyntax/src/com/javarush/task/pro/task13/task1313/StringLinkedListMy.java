@@ -13,7 +13,7 @@ public class StringLinkedListMy {
         Node currentElement = first.next;
 
         while ((currentElement) != null) {
-            String prevValue = (currentElement.prev.value == null) ? "first" : currentElement.prev.value;
+            String prevValue = (currentElement.prev == first) ? "first" : currentElement.prev.value;
             String currValue = currentElement.value;
             String nextValue = (currentElement.next == null) ? "last" : currentElement.next.value;
             System.out.printf("[prev: %5s] <- current: %5s -> [next: %4s]\n", prevValue, currValue, nextValue);
@@ -29,7 +29,7 @@ public class StringLinkedListMy {
         Node lastPrevNode = last.prev;
         lastPrevNode.next = node;
         node.prev = lastPrevNode;
-        //node.next = last;
+        //node.next = last; // === Не совсем корректно. В лекции говорится, что у носледнего Node().next == null
         last.prev = node;
     }
 
